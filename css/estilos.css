@@ -44,4 +44,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* mostrar la fecha seleccionada al estar en hover */
 input[type="date"]:hover::-webkit-datetime-edit {
 	display: block;
+	font-size: small;
 }
