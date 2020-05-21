@@ -23,10 +23,11 @@
 		<!--Obligatorio que la libreria datepicker este en el footer justo despues de los js de bootstrap para no causar conflicto-->
 		<script src="js/bootstrap-datepicker.min.js"></script>
 		<script src="js/bootstrap-datepicker.es.min.js"></script>
+		<script src="js/script.js"></script>
 
 		<!--Librerias para el datepicker-->
 
-		
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- Custom styles for this template -->
 		<link href="css/pricing.css" rel="stylesheet">
 		<link href="css/estilos.css" rel="stylesheet">
@@ -34,10 +35,12 @@
 	</head>
 	<body>
 		<nav class="navbar navbar-light bg-white">
-			<img src="img/logo.PNG" style="margin-left: 50px;" width="70" height="80">
+			<a href="index.html">
+                <img src="img/logo.PNG" style="margin-left: 50px;" width="70" height="80">
+            </a>
 			<form class="form-inline">
-				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				<input class="form-control mr-sm-2" type="search" placeholder="Busca un lugar" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
 			</form>
 		</nav>
 
@@ -45,27 +48,29 @@
 			<div class="jumbotron">
 				<div class="row">
 					<div class="col-md-3">
-						<input class="form-control" type="text" placeholder="¿A dónde quieres ir?">
+						<input id="lugar" class="form-control" type="text" placeholder="¿A dónde quieres ir?">
 					</div>
 
-					<div class="col-md-3">
-						<!--Calnedarios-->
-						
+					<div class="col-md-5">
+						<!--Calendarios-->
 						<div class="input-group" id="datepicker">
-        					<input class="form-control" placeholder="De" type="text" onfocus="(this.type='date')" id="date">
-        					<input class="form-control" placeholder="Hasta" type="text" onfocus="(this.type='date')" id="date">
+        					<input class="form-control" placeholder="De" type="text" onfocus="(this.type='date')" id="date-start">
+        					<input class="form-control" placeholder="Hasta" type="text" onfocus="(this.type='date')" id="date-end">
 						</div>
-
 						<!--Calendarios-->
 					</div>
 
-					<div class="col-md-3">
-						<input class="form-control" type="text" placeholder="Huéspedes">
+					<div class="col-md-2">
+						<input id="huesped" class="form-control" type="text" placeholder="Huéspedes" required>
 					</div>
 
-					<div class="col-md-3">
-						<button id="btnReserva" class="btn btn-outline-primary" style="width: 95%;" type="submit">Buscar</button>
+					<div class="col-md-2">
+						<button onclick="btnReservaClick()" id="btnReserva" class="btn btn-outline-primary" style="width: 95%;" type="submit">Buscar</button>
 					</div>
+				</div>
+
+				<div style="text-align: center;">
+					<span id="EmptySpace"> </span>
 				</div>
 			</div>
 		</div>
