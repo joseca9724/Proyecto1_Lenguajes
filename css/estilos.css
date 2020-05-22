@@ -12,6 +12,11 @@ input[type="date"]:hover{
     border-bottom-width: 0.20em;
 }
 
+select:hover{
+    border-bottom-color: #e64040;
+    border-bottom-width: 0.20em;
+}
+
 /* ocultar controles de input date */ 
 input[type="date"]::-webkit-inner-spin-button,
 ::-webkit-calendar-picker-indicator{
