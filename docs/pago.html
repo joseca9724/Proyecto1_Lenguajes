@@ -3,6 +3,7 @@
     <head>
         <meta charset='utf-8'>
         <title>HOSTY - Pago de Reserva</title>
+        <link rel="icon" href="img/logo.png">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
@@ -37,35 +38,46 @@
                         <legend class="text-center">Formulario de pago</legend>
                         <div>
                             <!--<span class="badge">Nombre: </span>-->
-                            <input id="nombre" class="form-control" type="text" placeholder="Nombre" required>
-                            <input id="apellidos" class="form-control" type="text" placeholder="Apellidos" required>
-                            <input id="correoE" class="form-control" type="text" placeholder="E-mail" required>
-                            <input id="conCorreoE" class="form-control" type="text" placeholder="Confirmar E-mail" required>
-                            <input id="direccion" class="form-control" type="text" placeholder="Dirección" required>
+                            <div class="col">
+                                <input id="nombre" class="form-control" type="text" placeholder="Nombre" style="margin-bottom: 5%;">
+                                <input id="apellidos" class="form-control" type="text" placeholder="Apellidos" style="margin-bottom: 5%;">
+                                <input id="correoE" class="form-control" type="text" placeholder="E-mail" style="margin-bottom: 5%;">
+                                <input id="conCorreoE" class="form-control" type="text" placeholder="Confirmar E-mail" style="margin-bottom: 5%;">
+                                <input id="direccion" class="form-control" type="text" placeholder="Dirección" style="margin-bottom: 5%;">
+                            </div>
                             
-                            <div class="form-row">
-                                <div class="col-5">
-                                    <input type="text" class="form-control" placeholder="Ciudad">
-                                </div>
-                                <div class="col">
-                                <input type="text" class="form-control" placeholder="Provincia">
-                                </div>
-                                <div class="col">
-                                <input type="text" class="form-control" placeholder="Código Postal">
+                            <div class="col" style="margin-bottom: 2%;">
+                                <div class="form-row">
+                                    <div class="col-5">
+                                        <input id="ciudad" type="text" class="form-control" placeholder="Ciudad">
+                                    </div>
+                                    <div class="col">
+                                        <input id="provincia" type="text" class="form-control" placeholder="Provincia">
+                                    </div>
+                                    <div class="col">
+                                        <input id="postal" type="text" class="form-control" placeholder="Código Postal">
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="form-row">
-                                <div class="col-6">
-                                    <input type="text" class="form-control" placeholder="Número de tarjeta">
-                                </div>
-                                <div class="col">
-                                    <input id="numCard" type="text" class="form-control" placeholder="Código de Seguridad">
-                                </div>
-                                <div>
-                                    <button id="btnNumCard" onclick="btnNumSeg()" class="btn btn-outline-primary" aria-describedby="tooltip">?</button>
+                            <div class="col" style="margin-bottom: 2%;">
+                                <div class="form-row">
+                                    <div class="col-6">
+                                        <input id="numCard" type="text" class="form-control" placeholder="Número de tarjeta">
+                                    </div>
+                                    <div class="col">
+                                        <input id="numSeg" type="text" class="form-control" placeholder="Código de Seguridad">
+                                    </div>
+                                    <div>
+                                        <button id="btnNumCard" onclick="btnNumSeg()" class="btn btn-outline-primary" aria-describedby="tooltip">?</button>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div id="divEmptySpace" class="col">
+
+                            </div>
+
                         </div>
                     </div>
 
@@ -75,8 +87,70 @@
                     <div id="divFactura" class="col-md-5">
                         <legend class="text-center">Factura inicial</legend>
 
-                        <div>
-                            <button id="btnPay" class="btn btn-outline-primary">Realizar pago</button>
+                        <div class="col">
+                            <img src="img/logo.PNG" style="margin-bottom: 10px;" width="40" height="50">
+                            <label>HOSTY - Factura</label>
+                        </div>
+
+                        <div class="col">
+                            <label>Lugar de hospedaje: <span id="nomLugar"></span> </label>
+                        </div>
+
+                        <div class="col">
+                            <label>Cantidad de hu&eacute;spedes: <span id="detHuesped"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Adultos: <span id="labAdulto"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Ni&ntilde;os: <span id="labNinnos"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Costo del hospedaje: <span id="costoHosp"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Servicio de plataforma: <span id="servPlat"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Servicio de limpieza: <span id="limpieza"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>I.V.A: <span id="IVA"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <label>Costo Total: <span id="total"></span></label>
+                        </div>
+
+                        <div class="col">
+                            <legend class="badge">Bono para el hopedador (opcional)</legend>
+                            <div class="form-row center">
+                                <div class="col-3">
+                                    <button class="btn btn-outline-primary" style="width: 100%;">₡2,000</button>
+                                </div>
+
+                                <div class="col-3">
+                                    <button class="btn btn-outline-primary" style="width: 100%;">₡5,000</button>
+                                </div>
+
+                                <div class="col-3">
+                                    <button class="btn btn-outline-primary" style="width: 100%;">₡10,000</button>
+                                </div>
+
+                                <div class="col-3">
+                                    <button class="btn btn-outline-primary" style="width: 100%;">₡15,000</button>
+                                </div>
+                            </div>                            
+                        </div>
+
+                        <div class="col">
+                            <button id="btnPay" onclick="btnPago()" class="btn btn-outline-primary">Realizar pago</button>
                         </div>
                     </div>
                     
