@@ -102,5 +102,6 @@ function btnReservaClick() {
     alert(document.namespaceURI);
 }*/
 
-
-
+function btnNumSeg() {
+    alert('El código de seguridad son los últimos tres dígitos localizados al reverso de la tarjeta. \nEste es un código de comprobación de los datos y ofrece un mayor grado de seguridad en su registro en línea.');
+}
