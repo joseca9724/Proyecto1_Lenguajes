@@ -1,5 +1,29 @@
+button#btnPay{
+  width: 100%;
+}
+
+div#divDatos{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+}
+
+div#divFactura{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+}
+
 div#divReserva{
-    vertical-align: middle;
+  vertical-align: middle;
+}
+
+div#divScreenPay{
+	background-color: #e64040;
+}
+
+input[type="text"]{
+	margin-bottom: 1em;
 }
 
 input[type="text"]:hover{
