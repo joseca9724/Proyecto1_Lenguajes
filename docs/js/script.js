@@ -20,6 +20,7 @@ var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva
 
 
 var listaAlojamientos = [alojamiento1, alojamiento2, alojamiento3, alojamiento4, alojamiento5, alojamiento6, alojamiento7, alojamiento8, alojamiento9, alojamiento10];
+
 function btnReservaClick() {
 
     /*var huesped = parseInt(document.getElementById('huesped').value, 10);
@@ -73,6 +74,8 @@ function btnReservaClick() {
                 var detalles = document.createElement('button');
                 detalles.className = "btn btn-success";
                 detalles.innerHTML = "Ver más detalles";
+                detalles.setAttribute("value", listaAlojamientos[index].codigo);
+                detalles.setAttribute("onclick",'datos()');
                 document.getElementById("filtrado").append(detalles);
 
                 var espacio = document.createElement('hr');
@@ -102,6 +105,28 @@ function btnReservaClick() {
     //document.getElementById('huesped').setAttribute();// = hh;
     alert(document.namespaceURI);
 }*/
+
+
+function datos(e) {
+    if (!e) {
+        e = window.event;
+    }
+    var cod = e.target.value;
+
+    let obj = {
+        codigo: cod,
+        lugar: document.getElementById('lugar').value,
+        dateStart: document.getElementById('date-start').value,
+        dateEnd: document.getElementById('date-end').value,
+        huespedes: document.getElementById('huesped').value
+    }
+
+    localStorage.setItem("obj",JSON.stringify(obj));
+
+    console.log(localStorage.getItem('obj'));
+
+    alert (cod);
+  }
 
 function btnNumSeg() {
     alert('El código de seguridad son los últimos tres dígitos localizados en la banda al reverso de la tarjeta. \nEste es un código de comprobación de los datos y ofrece un mayor grado de seguridad en su registro en línea.');
