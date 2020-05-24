@@ -23,10 +23,10 @@
 		<a href="index.html">
 			<img src="img/logo.png" style="margin-left: 50px;" width="70" height="80">
 		</a>
-		<form class="form-inline">			
-			<button id="btnAloj" class="btn btn-default btn-md-text" type="submit" style="margin-right: 0.75em;">Alojamientos</button>
-			<button id="btnFriends" class="btn btn-default btn-md-text" type="submit" style="margin-right: 0.75em;">Invitar amigos</button>
-			<button id="btnAboutUs" class="btn btn-default btn-md-text" type="submit" style="margin-right: 0.75em;">Sobre nosotros</button>
+		<form id="formMenu" class="form-inline align-self-center">
+			<button id="btnAloj" class="btn btn-default btn-md-text" type="submit" >Alojamientos</button>
+			<button id="btnFriends" class="btn btn-default btn-md-text" type="submit">Invitar amigos</button>
+			<button id="btnAboutUs" class="btn btn-default btn-md-text" type="submit">Sobre nosotros</button>
 			<button id="btnHelp" class="btn btn-default btn-md-text" type="submit">Ayuda</button>
 		</form>
 	</nav>
@@ -54,7 +54,7 @@
 				</div>
 
 				<div class="col-md-2">
-					<button onclick="btnReservaClick()" id="btnReserva" class="btn btn-outline-primary"
+					<button id="btnBuscar" onclick="btnReservaClick()" id="btnReserva" class="btn btn-default btn-md-text"
 						style="width: 95%;" type="submit">Buscar</button>
 				</div>
 			</div>
