@@ -142,3 +142,12 @@ span#totalF{
 	font-size: xx-large;
 	font-weight: bold;
 }
+
+#map {
+	height: 500px;
+	width: 50%;
+}
+#carrusel {
+	height: 500px;
+	width: 50%;
+}

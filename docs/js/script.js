@@ -45,10 +45,19 @@ function btnReservaClick() {
    var lugar = document.getElementById('lugar').value;
    var dateStart = document.getElementById('date-start').value;
    var dateEnd = document.getElementById('date-end').value;
+   var huesped = document.getElementById('huesped').value;
+   var hoy = new Date();
+   var fecha = new Date(document.getElementById('date-start').value);
    
     if (lugar == '' || huesped == '' || dateStart == '' || dateEnd == '') {
         document.getElementById('filtrado').innerText = 'Debe llenar todos los espacios para continuar';
-    } else {
+    }else if(fecha.getTime()<hoy.getTime()){
+        document.getElementById('filtrado').innerText = 'La fecha de inicio es anterior a la fecha de hoy';
+    }else if(dateStart>dateEnd ){
+        document.getElementById('filtrado').innerText = 'La fecha de inicio es posterior a la fecha fecha de fin';
+    }
+    else {
+        console.log();
         document.getElementById("filtrado").innerHTML = "";
         var bandera = false;
         for (let index = 0; index < listaAlojamientos.length; index++) {
