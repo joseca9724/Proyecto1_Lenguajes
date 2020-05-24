@@ -39,6 +39,10 @@ input[type="text"]:hover{
     border-bottom-color: #e64040;
     border-bottom-width: 0.20em;
 }
+input[type="number"]:hover{
+    border-bottom-color: #e64040;
+    border-bottom-width: 0.20em;
+}
 
 input[type="date"]:hover{
     border-bottom-color: #e64040;
