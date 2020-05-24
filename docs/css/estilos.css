@@ -4,6 +4,17 @@ button#btnPay{
   margin-bottom: 1em;
 }
 
+button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp{
+	border-color: #e64040;
+	color: #e64040;
+}
+
+button#btnAloj:hover, #btnFriends:hover, #btnAboutUs:hover, #btnHelp:hover{
+	background-color: #e64040;
+	border-color: #e64040;
+	color: #ffffff;
+}
+
 div#divDatos{
 	background-color: white;
 	border: 0.25em;

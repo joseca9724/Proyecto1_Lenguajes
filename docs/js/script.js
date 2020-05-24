@@ -77,6 +77,7 @@ function btnReservaClick() {
 
                 var espacio = document.createElement('hr');
                 espacio.className = "my-4";
+                espacio.style = "margin-left: 2em; margin-right: 2em;";
                 document.getElementById("filtrado").append(espacio);
 
                 bandera = true;
