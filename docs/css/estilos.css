@@ -1,10 +1,47 @@
+@media ( max-width : 768px ){
+	.btn-md-text.btn-default{
+		font-size: 11pt !important;
+	}
+
+	.col-md-6{
+		margin-bottom: 0.5em;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+
+	.col-md-5{
+		margin-bottom: 0.5em;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+}
+
+@media ( max-width : 414px ){
+	.btn-md-text.btn-default{
+		font-size: 8pt !important;
+	}
+}
+
+@media ( max-width : 400px ){
+	.btn-md-text.btn-default{
+		font-size: 7pt !important;
+	}
+}
+
+@media ( max-width : 350px ){
+	.btn-md-text.btn-default{
+		font-size: 6pt !important;
+	}
+}
+
 button#btnPay{
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp{
+	margin-right: 0.75em;
 	border-color: #e64040;
 	color: #e64040;
 }
@@ -104,4 +141,13 @@ span#totalF{
 	color: black;
 	font-size: xx-large;
 	font-weight: bold;
+}
+
+#map {
+	height: 500px;
+	width: 50%;
+}
+#carrusel {
+	height: 500px;
+	width: 50%;
 }

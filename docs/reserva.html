@@ -19,8 +19,10 @@
                 <img src="img/logo.PNG" style="margin-left: 50px;" width="70" height="80">
             </a>
 			<form class="form-inline">
-				<input class="form-control mr-sm-2" type="search" placeholder="Busca un lugar" aria-label="Search">
-				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				<button id="btnAloj" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Alojamientos</button>
+				<button id="btnFriends" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Invitar amigos</button>
+				<button id="btnAboutUs" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Sobre nosotros</button>
+				<button id="btnHelp" class="btn btn-outline-primary" type="submit">Ayuda</button>
 			</form>
 		</nav>
 
@@ -45,13 +47,27 @@
 					</div>
                     
 					<div class="col-md-2">
-						<button onclick="btnReservaClick()" id="btnReserva" class="btn btn-outline-primary" style="width: 95%;" type="submit">Buscar</button>
+						<button onclick="btnReservaClick()" id="btnReserva" class="btn btn-outline-primary" style="width: 95%;" type="submit">Reservar</button>
 					</div>
 				</div>
 
 				<div style="text-align: center;">
 					<span id="EmptySpace"> </span>
 				</div>
+			</div>
+
+			<div style="text-align: center;" id="reserva">
+			</div>
+			<br>
+			<div class="row h-100 justify-content-center align-items-center">
+				<div id="carrusel"></div>
+			</div>
+			<br>
+			<div style="text-align: center;" id="servicios">
+			</div>
+			<br>
+			<div class="row h-100 justify-content-center align-items-center">
+				<div id="map"></div>
 			</div>
 
 			<footer class="pt-4 my-md-5 pt-md-5 border-top">
@@ -65,6 +81,8 @@
 					integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
 					crossorigin="anonymous"></script>
 				<script type="text/javascript" src="js/js_reserva.js"></script>
+				<script src="https://kit.fontawesome.com/7e1bbc6e08.js" crossorigin="anonymous"></script>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&"></script>
 	
 				<div class="row">
 					<div class="col-12 col-md">
