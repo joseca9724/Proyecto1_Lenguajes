@@ -125,6 +125,7 @@ function btnPago() {
     logo.height = "50";
 
     var mySpan = document.createElement("span");
+    document.getElementById("divEmptySpace").innerHTML = "";
 
     if (nombre == '' || apellidos == '' || correo == '' || conCorreo == '' || direccion == '' ||
             ciudad == '' || provincia == '' || postal == '' || tarjeta == '' || codSeg == '') {

@@ -24,6 +24,13 @@ div#divScreenPay{
 	background-color: #e64040;
 }
 
+div#divTicketFac{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+	margin-right: 0.75em;
+}
+
 input[type="text"]{
 	margin-bottom: 1em;
 }
@@ -76,4 +83,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]:hover::-webkit-datetime-edit {
 	display: block;
 	font-size: small;
+}
+
+span#totalF{
+	color: black;
+	font-size: xx-large;
+	font-weight: bold;
 }
