@@ -1,5 +1,5 @@
 @media ( max-width : 768px ){
-	button#btnAloj, #btnBuscar{
+	button#btnBuscar, #btnCollapse{
 		font-size: 1em !important;
 	}
 
@@ -9,7 +9,7 @@
 }
 
 @media ( max-width : 500px ){
-	button#btnAloj, #btnBuscar{
+	button#btnBuscar{
 		margin-left: 1em;
 	}
 
@@ -19,7 +19,7 @@
 	}
 
 	.btn-md-text.btn-default{
-		font-size: 8pt !important;
+		font-size: 7pt !important;
 	}
 
 	.col-md-2{
@@ -36,6 +36,14 @@
 }
 
 @media ( max-width : 400px ){
+	button#btnBuscar{
+		margin-left: 0.5em;
+	}
+
+	a#btnCollapse{
+		margin-left: 6em;
+	}
+
 	button#btnAloj{
 		margin-left: 1em;
 	}
@@ -53,6 +61,10 @@
 	.btn-md-text.btn-default{
 		font-size: 6pt !important;
 	}
+
+	a#btnCollapse{
+		margin-left: 4em;
+	}
 }
 
 button#btnPay{
@@ -62,14 +74,14 @@ button#btnPay{
 }
 
 button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp, #btnBuscar, 
-#btnBonus1, #btnBonus2, #btnBonus3, #btnBonus4{
+#btnBonus1, #btnBonus2, #btnBonus3, #btnBonus4, #btnCollapse{
 	margin-right: 0.75em;
 	border-color: #e64040;
 	color: #e64040;
 }
 
 button#btnAloj:hover, #btnFriends:hover, #btnAboutUs:hover, #btnHelp:hover, #btnBuscar:hover,
-#btnBonus1:hover, #btnBonus2:hover, #btnBonus3:hover, #btnBonus4:hover{
+#btnBonus1:hover, #btnBonus2:hover, #btnBonus3:hover, #btnBonus4:hover, #btnCollapse:hover{
 	background-color: #e64040;
 	border-color: #e64040;
 	color: #ffffff;
