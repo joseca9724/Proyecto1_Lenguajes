@@ -80,11 +80,12 @@ function btnReservaClick() {
                 var salto = document.createElement("br");
                 document.getElementById("filtrado").append(salto);
 
-                var detalles = document.createElement('button');
+                var detalles = document.createElement('a');
                 detalles.className = "btn btn-success";
                 detalles.innerHTML = "Ver más detalles";
-                detalles.setAttribute("value", listaAlojamientos[index].codigo);
+                detalles.setAttribute("id", listaAlojamientos[index].codigo);
                 detalles.setAttribute("onclick",'datos()');
+                detalles.setAttribute("href","reserva.html");
                 document.getElementById("filtrado").append(detalles);
 
                 var espacio = document.createElement('hr');
@@ -120,7 +121,7 @@ function datos(e) {
     if (!e) {
         e = window.event;
     }
-    var cod = e.target.value;
+    var cod = e.target.id;
 
     let obj = {
         codigo: cod,
@@ -134,7 +135,8 @@ function datos(e) {
 
     console.log(localStorage.getItem('obj'));
 
-    alert (cod);
+    alert(cod);
+
   }
 
 function btnNumSeg() {
