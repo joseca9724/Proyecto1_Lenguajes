@@ -1,8 +1,56 @@
+button#btnPay{
+  width: 100%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp{
+	border-color: #e64040;
+	color: #e64040;
+}
+
+button#btnAloj:hover, #btnFriends:hover, #btnAboutUs:hover, #btnHelp:hover{
+	background-color: #e64040;
+	border-color: #e64040;
+	color: #ffffff;
+}
+
+div#divDatos{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+}
+
+div#divFactura{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+}
+
 div#divReserva{
-    vertical-align: middle;
+  vertical-align: middle;
+}
+
+div#divScreenPay{
+	background-color: #e64040;
+}
+
+div#divTicketFac{
+	background-color: white;
+	border: 0.25em;
+	border-radius: 0.25em;
+	margin-right: 0.75em;
+}
+
+input[type="text"]{
+	margin-bottom: 1em;
 }
 
 input[type="text"]:hover{
+    border-bottom-color: #e64040;
+    border-bottom-width: 0.20em;
+}
+input[type="number"]:hover{
     border-bottom-color: #e64040;
     border-bottom-width: 0.20em;
 }
@@ -50,4 +98,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]:hover::-webkit-datetime-edit {
 	display: block;
 	font-size: small;
+}
+
+span#totalF{
+	color: black;
+	font-size: xx-large;
+	font-weight: bold;
 }

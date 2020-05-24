@@ -8,7 +8,7 @@ if (!localStorage.getItem("huespedL")) {
 
 var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel JC", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1 };
 var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa JC", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2 };
-var alojamiento3 = { ubicacion: "costa rica,cartago,paraiso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3 };
+var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3 };
 var alojamiento4 = { ubicacion: "costa rica,guanacaste,carrillo", nombre: "Cabinas Carrillo", tipo: "Habitación compartida", img: "img/alojamiento4.PNG", descripcion: "Disfruta de magnificas playas", codigo: 4 };
 var alojamiento5 = { ubicacion: "costa rica,san josé,san jose", nombre: "Hotel Presidente", tipo: "Habitación de hotel", img: "img/alojamiento5.PNG", descripcion: "Sumergite en la cultura y la vida de San José", codigo: 5 };
 var alojamiento6 = { ubicacion: "costa rica,san josé,pérez zeledón", nombre: "Casa Perez", tipo: "Alojamiento Entero", img: "img/alojamiento6.PNG", descripcion: "Gran zona verde", codigo: 6 };
@@ -20,6 +20,7 @@ var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva
 
 
 var listaAlojamientos = [alojamiento1, alojamiento2, alojamiento3, alojamiento4, alojamiento5, alojamiento6, alojamiento7, alojamiento8, alojamiento9, alojamiento10];
+
 function btnReservaClick() {
 
     /*var huesped = parseInt(document.getElementById('huesped').value, 10);
@@ -46,7 +47,7 @@ function btnReservaClick() {
    var dateEnd = document.getElementById('date-end').value;
    
     if (lugar == '' || huesped == '' || dateStart == '' || dateEnd == '') {
-        document.getElementById('EmptySpace').innerText = 'Debe llenar todos los espacios para continuar';
+        document.getElementById('filtrado').innerText = 'Debe llenar todos los espacios para continuar';
     } else {
         document.getElementById("filtrado").innerHTML = "";
         var bandera = false;
@@ -73,10 +74,13 @@ function btnReservaClick() {
                 var detalles = document.createElement('button');
                 detalles.className = "btn btn-success";
                 detalles.innerHTML = "Ver más detalles";
+                detalles.setAttribute("value", listaAlojamientos[index].codigo);
+                detalles.setAttribute("onclick",'datos()');
                 document.getElementById("filtrado").append(detalles);
 
                 var espacio = document.createElement('hr');
                 espacio.className = "my-4";
+                espacio.style = "margin-left: 2em; margin-right: 2em;";
                 document.getElementById("filtrado").append(espacio);
 
                 bandera = true;
@@ -103,4 +107,94 @@ function btnReservaClick() {
 }*/
 
 
+function datos(e) {
+    if (!e) {
+        e = window.event;
+    }
+    var cod = e.target.value;
 
+    let obj = {
+        codigo: cod,
+        lugar: document.getElementById('lugar').value,
+        dateStart: document.getElementById('date-start').value,
+        dateEnd: document.getElementById('date-end').value,
+        huespedes: document.getElementById('huesped').value
+    }
+
+    localStorage.setItem("obj",JSON.stringify(obj));
+
+    console.log(localStorage.getItem('obj'));
+
+    alert (cod);
+  }
+
+function btnNumSeg() {
+    alert('El código de seguridad son los últimos tres dígitos localizados en la banda al reverso de la tarjeta. \nEste es un código de comprobación de los datos y ofrece un mayor grado de seguridad en su registro en línea.');
+}
+
+function btnPago() {
+    var nombre = document.getElementById('nombre').value;
+    var apellidos = document.getElementById('apellidos').value;
+    var correo = document.getElementById('correoE').value;
+    var conCorreo = document.getElementById('conCorreoE').value;
+    var direccion = document.getElementById('direccion').value;
+    var ciudad = document.getElementById('ciudad').value;
+    var provincia = document.getElementById('provincia').value;
+    var postal = document.getElementById('postal').value;
+    var tarjeta = document.getElementById('numCard').value;
+    var codSeg = document.getElementById('numSeg').value;
+
+    var logo = document.createElement("img");
+    logo.setAttribute("alt", "logo");
+    logo.src = "img/logo.png";
+    logo.width = "40";
+    logo.height = "50";
+
+    var mySpan = document.createElement("span");
+    document.getElementById("divEmptySpace").innerHTML = "";
+
+    if (nombre == '' || apellidos == '' || correo == '' || conCorreo == '' || direccion == '' ||
+            ciudad == '' || provincia == '' || postal == '' || tarjeta == '' || codSeg == '') {
+        
+        document.getElementById("divEmptySpace").append(logo);
+        mySpan.innerHTML = "Es necesario que ingrese toda la información que se le solicita";
+        document.getElementById("divEmptySpace").append(mySpan);
+    } else {
+        postal = parseInt(postal);
+        tarjeta = parseInt(tarjeta);
+        codSeg = parseInt(codSeg);
+
+        if (isNaN(postal)) {
+            document.getElementById("divEmptySpace").append(logo);
+            mySpan.innerHTML = "El código postal debe ser en formato numérico";
+            document.getElementById("divEmptySpace").append(mySpan);
+        } else { 
+            if (isNaN(tarjeta)) {
+                document.getElementById("divEmptySpace").append(logo);
+                mySpan.innerHTML = "El número de tarjeta debe ser en formato numérico";
+                document.getElementById("divEmptySpace").append(mySpan);
+            } else { 
+                if (isNaN(codSeg)) {
+                    document.getElementById("divEmptySpace").append(logo);
+                    mySpan.innerHTML = "El código de seguridad debe ser en formato numérico";
+                    document.getElementById("divEmptySpace").append(mySpan);
+                } else { //codigo de seguridad validado
+                    if (correo != conCorreo) {
+                        document.getElementById("divEmptySpace").append(logo);
+                        mySpan.innerHTML = "Verifique que haya ingresado el correo correctamente";
+                        document.getElementById("divEmptySpace").append(mySpan);
+                    } else { //correo validado
+                        //todas las validaciones fueron ralizadas correctamente
+
+                        sessionStorage.setItem("nombre", nombre);
+                        sessionStorage.setItem("apellidos", apellidos);
+                        sessionStorage.setItem("correo", correo);
+                        sessionStorage.setItem("direccion", direccion);
+                        
+                        location.href = "pago_final.html";
+                    }
+                }
+            } // numero de tarjeta validado
+        }//codio postal validado
+    } // validaciones (espacios en blanco)
+}
