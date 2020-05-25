@@ -5,23 +5,11 @@ if (!localStorage.getItem("huespedL")) {
     getLocalStorage();
     localStorage.clear();
 }*/
-<<<<<<< HEAD
 
 function btnPagoFin() { 
     location.href = "index.html";
 }
 
-var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel JC", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1 };
-var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa JC", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2 };
-var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3 };
-var alojamiento4 = { ubicacion: "costa rica,guanacaste,carrillo", nombre: "Cabinas Carrillo", tipo: "Habitación compartida", img: "img/alojamiento4.PNG", descripcion: "Disfruta de magnificas playas", codigo: 4 };
-var alojamiento5 = { ubicacion: "costa rica,san josé,san jose", nombre: "Hotel Presidente", tipo: "Habitación de hotel", img: "img/alojamiento5.PNG", descripcion: "Sumergite en la cultura y la vida de San José", codigo: 5 };
-var alojamiento6 = { ubicacion: "costa rica,san josé,pérez zeledón", nombre: "Casa Perez", tipo: "Alojamiento Entero", img: "img/alojamiento6.PNG", descripcion: "Gran zona verde", codigo: 6 };
-var alojamiento7 = { ubicacion: "costa rica,san josé,escazú", nombre: "Casa Guachipelin", tipo: "Habitación privada", img: "img/alojamiento7.PNG", descripcion: "Lugar tranquilo", codigo: 7 };
-var alojamiento8 = { ubicacion: "costa rica,guanacaste,nicoya", nombre: "Hospedaje Fiesta ", tipo: "Habitación compartida", img: "img/alojamiento8.PNG", descripcion: "Hermosas playas cercanas", codigo: 8 };
-var alojamiento9 = { ubicacion: "costa rica,limón,limón", nombre: "Selina Puerto Viejo", tipo: "Habitación de hotel", img: "img/alojamiento9.PNG", descripcion: "Diversión asegurada", codigo: 9 };
-var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva", tipo: "Alojamiento Entero", img: "img/alojamiento10.PNG", descripcion: "Espaciosa casa", codigo: 10 };
-=======
 var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel El Recreo", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1, costo: 20000, maxH: 2, piscina: true ,parqueo:true};
 var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa Santa Cruz", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2, costo: 10000, maxH: 5, piscina: false ,parqueo:true};
 var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3, costo: 15000, maxH: 1, piscina: false ,parqueo:false};
@@ -32,7 +20,6 @@ var alojamiento7 = { ubicacion: "costa rica,san josé,escazú", nombre: "Casa Gu
 var alojamiento8 = { ubicacion: "costa rica,guanacaste,nicoya", nombre: "Hospedaje Fiesta ", tipo: "Habitación compartida", img: "img/alojamiento8.PNG", descripcion: "Hermosas playas cercanas", codigo: 8, costo: 40000, maxH: 6, piscina: true ,parqueo:true}
 var alojamiento9 = { ubicacion: "costa rica,limón,limón", nombre: "Selina Puerto Viejo", tipo: "Habitación de hotel", img: "img/alojamiento9.PNG", descripcion: "Diversión asegurada", codigo: 9, costo: 23000, maxH: 2, piscina: true ,parqueo:true};
 var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva", tipo: "Alojamiento Entero", img: "img/alojamiento10.PNG", descripcion: "Espaciosa casa", codigo: 10, costo: 21000, maxH: 6, piscina: false ,parqueo:true};
->>>>>>> JoseCarlos
 
 
 
