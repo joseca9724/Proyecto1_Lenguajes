@@ -190,10 +190,10 @@ span#totalF{
 }
 
 #map {
-	height: 500px;
-	width: 50%;
+	height: auto;
+	width: 60%;
 }
 #carrusel {
-	height: 400px;
+	height: auto;
 	width: 50%;
 }
