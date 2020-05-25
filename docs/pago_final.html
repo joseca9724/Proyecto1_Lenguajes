@@ -17,13 +17,13 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="css/estilos.css" rel="stylesheet">
         <script type="text/javascript" src="js/script.js"></script>
-        <script type="text/javascript" src="js/script_pago.js"></script>
+        
     </head>
 
     <body>
         <nav class="navbar navbar-light bg-white">
             <a href="index.html">
-                <img src="img/logo.PNG" style="margin-left: 50px;" width="70" height="80">
+                <img src="img/logo.png" style="margin-left: 50px;" width="70" height="80">
             </a>
 			<form class="form-inline">
 				<!--algo hay que poner aquí-->
@@ -36,7 +36,7 @@
                     <div class="col-md-1"></div>
                     <div id="divTicketFac" class="col-md-3">
                         <div class="col" style="margin-top: 1em;">
-                            <img src="img/logo.PNG" style="margin-bottom: 10px; margin-left: 40%;" width="40" height="50">
+                            <img src="img/logo.png" style="margin-bottom: 10px; margin-left: 40%;" width="40" height="50">
                         </div>
                         <div class="col">
                             <legend class="badge">HOSTY - Factura</legend>
@@ -44,7 +44,7 @@
 
                         <div class="col">
                             <!--<label>Costo Total: <span id="totalF"></span></label>-->
-                            <legend class="text-center" style="margin-top: 1.5em;"> <span id="totalF">Hola</span> </legend>
+                            <legend class="text-center" style="margin-top: 1.5em;"> <span id="totalF"></span> </legend>
                             <legend class="badge" style="color:  #e1d6d6;">Costo Total</legend>
                         </div>
                     </div>
@@ -64,13 +64,6 @@
                             <label>Cantidad de hu&eacute;spedes: <span id="detHuespedF"></span></label>
                         </div>
 
-                        <div class="col">
-                            <label>Adultos: <span id="labAdultoF"></span></label>
-                        </div>
-
-                        <div class="col">
-                            <label>Ni&ntilde;os: <span id="labNinnosF"></span></label>
-                        </div>
 
                         <div class="col">
                             <label>Costo del hospedaje: <span id="costoHospF"></span></label>
@@ -87,15 +80,14 @@
                         <div class="col">
                             <label>I.V.A: <span id="IVAF"></span></label>
                         </div>
-
-                        <script type="text/javascript">
-                            showDatos();
-                        </script>
                     </div>
 
                     <div class="col-md-2"><!--Solo para separar--></div>
                 </div>
             </div>
         </div>
+        <footer>
+            <script type="text/javascript" src="js/script_pagoFinal.js"></script>
+        </footer>
     </body>
 </html>

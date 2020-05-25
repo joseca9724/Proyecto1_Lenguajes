@@ -135,7 +135,6 @@ function datos(e) {
 
     console.log(localStorage.getItem('obj'));
 
-    alert(cod);
 
   }
 
