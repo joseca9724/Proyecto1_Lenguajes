@@ -1,13 +1,13 @@
-var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel El Recreo", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1, costo: 20000 };
-var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa Santa Cruz", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2, costo: 20000 };
-var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3, costo: 20000 };
-var alojamiento4 = { ubicacion: "costa rica,guanacaste,carrillo", nombre: "Cabinas Carrillo", tipo: "Habitación compartida", img: "img/alojamiento4.PNG", descripcion: "Disfruta de magnificas playas", codigo: 4, costo: 20000 };
-var alojamiento5 = { ubicacion: "costa rica,san josé,san jose", nombre: "Hotel Presidente", tipo: "Habitación de hotel", img: "img/alojamiento5.PNG", descripcion: "Sumergite en la cultura y la vida de San José", codigo: 5, costo: 20000 };
-var alojamiento6 = { ubicacion: "costa rica,san josé,pérez zeledón", nombre: "Casa Perez", tipo: "Alojamiento Entero", img: "img/alojamiento6.PNG", descripcion: "Gran zona verde", codigo: 6, costo: 20000 };
-var alojamiento7 = { ubicacion: "costa rica,san josé,escazú", nombre: "Casa Guachipelin", tipo: "Habitación privada", img: "img/alojamiento7.PNG", descripcion: "Lugar tranquilo", codigo: 7, costo: 20000 };
-var alojamiento8 = { ubicacion: "costa rica,guanacaste,nicoya", nombre: "Hospedaje Fiesta ", tipo: "Habitación compartida", img: "img/alojamiento8.PNG", descripcion: "Hermosas playas cercanas", codigo: 8, costo: 20000 };
-var alojamiento9 = { ubicacion: "costa rica,limón,limón", nombre: "Selina Puerto Viejo", tipo: "Habitación de hotel", img: "img/alojamiento9.PNG", descripcion: "Diversión asegurada", codigo: 9, costo: 20000 };
-var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva", tipo: "Alojamiento Entero", img: "img/alojamiento10.PNG", descripcion: "Espaciosa casa", codigo: 10, costo: 20000 };
+var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel El Recreo", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1, costo: 20000 ,maxH:2,piscina:true};
+var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa Santa Cruz", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2, costo: 30000 ,maxH:5,piscina:false};
+var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3, costo: 15000 ,maxH:1,piscina:false};
+var alojamiento4 = { ubicacion: "costa rica,guanacaste,carrillo", nombre: "Cabinas Carrillo", tipo: "Habitación compartida", img: "img/alojamiento4.PNG", descripcion: "Disfruta de magnificas playas", codigo: 4, costo: 25000 ,maxH:4,piscina:true};
+var alojamiento5 = { ubicacion: "costa rica,san josé,san jose", nombre: "Hotel Presidente", tipo: "Habitación de hotel", img: "img/alojamiento5.PNG", descripcion: "Sumergite en la cultura y la vida de San José", codigo: 5, costo: 25500 ,maxH:2,piscina:false};
+var alojamiento6 = { ubicacion: "costa rica,san josé,pérez zeledón", nombre: "Casa Perez", tipo: "Alojamiento Entero", img: "img/alojamiento6.PNG", descripcion: "Gran zona verde", codigo: 6, costo: 18000,maxH:5 ,piscina:false};
+var alojamiento7 = { ubicacion: "costa rica,san josé,escazú", nombre: "Casa Guachipelin", tipo: "Habitación privada", img: "img/alojamiento7.PNG", descripcion: "Lugar tranquilo", codigo: 7, costo: 28000 ,maxH:1,piscina:false};
+var alojamiento8 = { ubicacion: "costa rica,guanacaste,nicoya", nombre: "Hospedaje Fiesta ", tipo: "Habitación compartida", img: "img/alojamiento8.PNG", descripcion: "Hermosas playas cercanas", codigo: 8, costo: 40000 ,maxH:6,piscina:true}
+var alojamiento9 = { ubicacion: "costa rica,limón,limón", nombre: "Selina Puerto Viejo", tipo: "Habitación de hotel", img: "img/alojamiento9.PNG", descripcion: "Diversión asegurada", codigo: 9, costo: 23000 ,maxH:2,piscina:true};
+var alojamiento10 = { ubicacion: "costa rica,heredia,barva", nombre: "Casa Barva", tipo: "Alojamiento Entero", img: "img/alojamiento10.PNG", descripcion: "Espaciosa casa", codigo: 10, costo: 21000 ,maxH:6,piscina:false};
 
 
 
@@ -28,7 +28,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion +"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/img1-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img1-2.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img1-3.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -105,7 +105,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/img2-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img2-2.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img2-3.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -123,30 +123,6 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wind");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Aire Acondicionado");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-parking");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" Parqueo ");
@@ -158,6 +134,14 @@ switch (x) {
         icono.setAttribute("class", "fas fa-tv");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" TV");
+
+        var salto = document.createElement("br");
+        document.getElementById("servicios").append(salto);
+
+        var icono = document.createElement('i');
+        icono.setAttribute("class", "fas fa-couch");
+        document.getElementById("servicios").append(icono);
+        document.getElementById("servicios").append(" Casa amueblada");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -183,7 +167,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/alojamiento3.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img3-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img3-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -204,41 +188,25 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wind");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Aire Acondicionado");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-parking");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-tv");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" TV");
+        
+        var salto = document.createElement("br");
+        document.getElementById("servicios").append(salto);
+
+        var icono = document.createElement('i');
+        icono.setAttribute("class", "fas fa-tshirt");
+        document.getElementById("servicios").append(icono);
+        document.getElementById("servicios").append(" Closet");
+
+        var salto = document.createElement("br");
+        document.getElementById("servicios").append(salto);
+
+        var icono = document.createElement('i');
+        icono.setAttribute("class", "fas fa-utensils");
+        document.getElementById("servicios").append(icono);
+        document.getElementById("servicios").append(" Desayuno incluido");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -264,7 +232,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/alojamiento4.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img4-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img4-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -301,17 +269,17 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
+        icono.setAttribute("class", "fas fa-parking");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
+        document.getElementById("servicios").append(" Parqueo ");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-parking");
+        icono.setAttribute("class", "fas fa-shuttle-van");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
+        document.getElementById("servicios").append(" Transporte a playas cercanas");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -345,7 +313,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/alojamiento5.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img5-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img5-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -374,33 +342,17 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-parking");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-tv");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" TV");
+
+        var salto = document.createElement("br");
+        document.getElementById("servicios").append(salto);
+
+        var icono = document.createElement('i');
+        icono.setAttribute("class", "fas fa-utensils");
+        document.getElementById("servicios").append(icono);
+        document.getElementById("servicios").append(" Desayuno incluido");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -426,7 +378,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/img6-3.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img6-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img6-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -439,49 +391,25 @@ switch (x) {
         document.getElementById("servicios").append(alojamientoNombre);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wifi");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Wi-Fi");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wind");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Aire Acondicionado");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-parking");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
+        document.getElementById("servicios").append(" Parqueo");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-tv");
+        icono.setAttribute("class", "fas fa-pagelines");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" TV");
+        document.getElementById("servicios").append(" Amplias zonas verdes");
+
+        var salto = document.createElement("br");
+        document.getElementById("servicios").append(salto);
+
+        var icono = document.createElement('i');
+        icono.setAttribute("class", "fas fa-shield-alt");
+        document.getElementById("servicios").append(icono);
+        document.getElementById("servicios").append(" Zona segura");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -507,7 +435,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/img7-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img7-2.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img7-3.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -523,30 +451,6 @@ switch (x) {
         icono.setAttribute("class", "fas fa-wifi");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" Wi-Fi");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wind");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Aire Acondicionado");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -588,7 +492,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/img8-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img8-2.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img8-3.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -618,14 +522,6 @@ switch (x) {
 
         var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
         document.getElementById("servicios").append(icono);
         document.getElementById("servicios").append(" Piscina");
 
@@ -669,7 +565,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/alojamiento9.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img9-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img9-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -706,17 +602,9 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-parking");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
+        document.getElementById("servicios").append(" Parqueo");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
@@ -751,7 +639,7 @@ switch (x) {
         alojamientoNombre.innerHTML = listaAlojamientos[index].nombre;
         document.getElementById("reserva").append(alojamientoNombre);
         var descripcion = document.createElement('div');
-        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion;
+        descripcion.innerHTML = listaAlojamientos[index].tipo + "<br>" + listaAlojamientos[index].descripcion+"<br>" +"¢"+ listaAlojamientos[index].costo + " /por noche";
         document.getElementById("reserva").append(descripcion);
 
         document.getElementById("carrusel").innerHTML = '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators"><li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li><li data-target="#carouselExampleIndicators" data-slide-to="1"></li><li data-target="#carouselExampleIndicators" data-slide-to="2"></li></ol><div class="carousel-inner"><div class="carousel-item active"><img src="img/alojamiento10.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img10-1.PNG" class="d-block w-100" alt="..."></div><div class="carousel-item"><img src="img/img10-2.PNG" class="d-block w-100" alt="..."></div></div><a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span></a></div>'
@@ -772,33 +660,9 @@ switch (x) {
         document.getElementById("servicios").append(salto);
 
         var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-wind");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Aire Acondicionado");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-swimmer");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
-        icono.setAttribute("class", "fas fa-hot-tub");
-        document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Piscina");
-
-        var salto = document.createElement("br");
-        document.getElementById("servicios").append(salto);
-
-        var icono = document.createElement('i');
         icono.setAttribute("class", "fas fa-parking");
         document.getElementById("servicios").append(icono);
-        document.getElementById("servicios").append(" Parqueo ");
+        document.getElementById("servicios").append(" Parqueo");
 
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
