@@ -85,8 +85,14 @@ switch (x) {
         var salto = document.createElement("br");
         document.getElementById("servicios").append(salto);
 
-        document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1168.5179921229087!2d-83.69486166750323!3d9.899745684629043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d9.89992!2d-83.6945459!5e0!3m2!1sen!2scr!4v1590318783290!5m2!1sen!2scr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
-
+        if(screen.width>800){
+        document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1168.5179921229087!2d-83.69486166750323!3d9.899745684629043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d9.89992!2d-83.6945459!5e0!3m2!1sen!2scr!4v1590367540216!5m2!1sen!2scr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+        }else if(screen.width<800 && screen.width>400) {
+            document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1168.5179921229087!2d-83.69486166750323!3d9.899745684629043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d9.89992!2d-83.6945459!5e0!3m2!1sen!2scr!4v1590318783290!5m2!1sen!2scr" width="400" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+            }
+        else{
+        document.getElementById("map").innerHTML = '<iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1168.5179921229087!2d-83.69486166750323!3d9.899745684629043!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d9.89992!2d-83.6945459!5e0!3m2!1sen!2scr!4v1590318783290!5m2!1sen!2scr" width="200" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+        }
 
         break;
     case 2:
