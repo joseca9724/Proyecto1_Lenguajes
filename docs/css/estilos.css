@@ -1,10 +1,15 @@
 @media ( max-width : 768px ){
-	button#btnBuscar, #btnCollapse{
+	button#btnBuscar, #btnCollapse, #btnReserva{
 		font-size: 1em !important;
 	}
 
 	button#btnBonus1, #btnBonus2, #btnBonus3, #btnBonus4{
 		font-size: 0.5em;
+	}
+
+	div#divTicketFac{
+		margin-left: 0.75em;
+		margin-bottom: 0.75em;
 	}
 }
 
@@ -67,21 +72,27 @@
 	}
 }
 
-a#btnPay{
+button#btnPay{
 	width: 100%;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
-button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp, #btnBuscar, 
-#btnBonus1, #btnBonus2, #btnBonus3, #btnBonus4, #btnCollapse{
+button#btnFacFin{
+	width: 100%;
+	margin-top: 1em;
+}
+
+button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp, #btnBuscar, #btnPay, #btnNumCard, #btnCloseMod,
+#btnBonus1, #btnBonus2, #btnBonus3, #btnBonus4, #btnCollapse, #btnReserva, #btnFacFin{
 	margin-right: 0.75em;
 	border-color: #e64040;
 	color: #e64040;
 }
 
 button#btnAloj:hover, #btnFriends:hover, #btnAboutUs:hover, #btnHelp:hover, #btnBuscar:hover,
-#btnBonus1:hover, #btnBonus2:hover, #btnBonus3:hover, #btnBonus4:hover, #btnCollapse:hover{
+#btnBonus1:hover, #btnBonus2:hover, #btnBonus3:hover, #btnBonus4:hover, #btnCollapse:hover,
+#btnReserva:hover, #btnPay:hover, #btnNumCard:hover, #btnFacFin:hover, #btnCloseMod:hover{
 	background-color: #e64040;
 	border-color: #e64040;
 	color: #ffffff;

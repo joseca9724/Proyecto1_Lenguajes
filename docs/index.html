@@ -24,11 +24,148 @@
 			<img src="img/logo.png" style="margin-left: 50px;" width="70" height="80">
 		</a>
 		<form id="formMenu" class="form-inline align-self-center">
-			<button id="btnAloj" class="btn btn-default btn-md-text" type="submit" >Alojamientos</button>
-			<button id="btnFriends" class="btn btn-default btn-md-text" type="submit">Invitar amigos</button>
-			<button id="btnAboutUs" class="btn btn-default btn-md-text" type="submit">Sobre nosotros</button>
-			<button id="btnHelp" class="btn btn-default btn-md-text" type="submit">Ayuda</button>
+			<button id="btnAloj" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modAloja">Alojamientos</button>
+			<button id="btnFriends" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modInvita">Invitar amigos</button>
+			<button id="btnAboutUs" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modAboutUs">Sobre nosotros</button>
+			<button id="btnHelp" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modHelp">Ayuda</button>
 		</form>
+
+		<!--modal para el alojamiento-->
+		<div class="modal fade" id="modAloja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modAlojaLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Alojamientos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body table-responsive">
+						<p>Tenemos alojamientos en:</p>
+						<table class="table table-hover">
+							<thead class="thead-light">
+								<tr>
+									<th scope="col">San Jos&eacute;</th>
+									<th scope="col">Cartago</th>
+									<th scope="col">Heredia</th>
+									<th scope="col">Lim&oacute;n</th>
+									<th scope="col">Guanacaste</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>San Jos&eacute;</td>
+									<td>Paraíso</td>
+									<td>Barva</td>
+									<td>Lim&oacute;n</td>
+									<td>Carrillo</td>
+								</tr>
+
+								<tr>
+									<td>P&eacute;rez Zeled&oacute;n</td>
+									<td>Turrialba</td>
+									<td> - </td>
+									<td> - </td>
+									<td>Nicoya</td>
+								</tr>
+
+								<tr>
+									<td>Escaz&uacute;</td>
+									<td> - </td>
+									<td> - </td>
+									<td> - </td>
+									<td> - </td>
+								</tr>
+							</tbody>
+							
+						</table>
+						<p>Puede buscarlos por provincia o lugar.</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal para el alojamiento-->
+
+		<!--modal para invitar a amigos-->
+		<div class="modal fade" id="modInvita" tabindex="-1" role="dialog" aria-labelledby="modInvitaLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modInvitaLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Invite a sus amigos y conocidos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body table-responsive">
+						<p>Comparta nuestra direción web: <a href="index.html">hosty.co.cr</a> con sus amigos, familiares y conocidos</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal para invitar a amigos-->
+
+		<!--modal para saber sobre nosotros-->
+		<div class="modal fade" id="modAboutUs" tabindex="-1" role="dialog" aria-labelledby="modAboutUsLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modAboutUsLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Con&oacute;zcanos</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body table-responsive">
+						<p class="text-justify">
+							Hosty es un mercado comunitario que sirve para publicar, 
+							dar publicidad y reservar alojamiento de forma económica 
+							en Costa Rica a través de internet o desde tu smarthphone.
+						</p>
+						<p class="text-justify">
+							Hosty hace que compartir sea más fácil, divertido y seguro. 
+							Verificamos los perfiles y anuncios de manera personal, 
+							mantenemos un sistema inteligente de mensajería para que 
+							anfitriones y huéspedes puedan comunicarse con seguridad y 
+							administramos una plataforma confiable para recaudar y transferir los pagos.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal para saber sobre nosotros-->
+
+		<!--modal para ayuda-->
+		<div class="modal fade" id="modHelp" tabindex="-1" role="dialog" aria-labelledby="modHelpLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modHelpLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60">Queremos ayudarle</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body table-responsive">
+						<p>
+							Contacte con el soporte t&eacute;cnico de Hosty para cualquier duda o consulta a trav&eacute;s 
+							del correo <a href="soporte_cliente@hosty.co.cr">soporte_cliente@hosty.co.cr</a>.
+						</p>
+					</div>
+					<div class="modal-footer">
+						<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--modal para ayuda-->
 	</nav>
 
 	<div class="container" id="divReserva">
@@ -65,11 +202,11 @@
 			</p>
 
 			<div class="collapse" id="collapseExample">
-				<div class="checkbox">
-					<label><input type="checkbox" value="">Piscina</label>
+				<div class="checkbox" id="checkPiscina">
+					<label><input type="checkbox" value="" class="cbn">Piscina</label>
 				  </div>
 				  <div class="checkbox">
-					<label><input type="checkbox" value="">Parqueo</label>
+					<label><input type="checkbox" value="" class="cbn">Parqueo</label>
 				  </div>
 			</div>
 		</div>
@@ -87,50 +224,50 @@
 		<div class="card-deck mb-3 text-center">
 			<div class="card mb-4 shadow-sm">
 				<div class="card-header">
-					<h4 class="my-0 font-weight-normal">Lugar Recomendado 1</h4>
+					<h4 class="my-0 font-weight-normal">Casa El Recreo</h4>
 				</div>
 				<img src="img/casaJC.PNG" class="card-img-top" height="200" width="200">
 				<div class="card-body">
-					<h1 class="card-title pricing-card-title">$25 <small class="text-muted">/ por noche</small></h1>
+					<h2 class="card-title pricing-card-title">¢10000 <small class="text-muted">/ por noche</small></h1>
 					<ul class="list-unstyled mt-3 mb-4">
 						<li>WiFi</li>
 						<li>Cocina amueblada</li>
 						<li>Lugar Tranquilo</li>
 						<li>Cerca de la cuidad</li>
 					</ul>
-					<button type="button" class="btn btn-lg btn-block btn-primary">Más detalles</button>
+					<button type="button" class="btn btn-lg btn-block btn-primary" id="2" onclick="datosS()">Más detalles</button>
 				</div>
 			</div>
 			<div class="card mb-4 shadow-sm">
 				<div class="card-header">
-					<h4 class="my-0 font-weight-normal">Lugar Recomendado 2</h4>
+					<h4 class="my-0 font-weight-normal">Cabinas Carrillo</h4>
 				</div>
 				<img src="img/alojamiento4.PNG" class="card-img-top" height="200" width="200">
 				<div class="card-body">
-					<h1 class="card-title pricing-card-title">$50 <small class="text-muted">/por noche</small></h1>
+					<h2 class="card-title pricing-card-title">¢25000  <small class="text-muted">/por noche</small></h1>
 					<ul class="list-unstyled mt-3 mb-4">
 						<li>Aire acondicionado</li>
 						<li>WiFi</li>
 						<li>Televisión por cable</li>
 						<li>Transporte a playas cercanas</li>
 					</ul>
-					<button type="button" class="btn btn-lg btn-block btn-primary">Más detalles</button>
+					<button type="button" class="btn btn-lg btn-block btn-primary" id="4" onclick="datosS()">Más detalles</button>
 				</div>
 			</div>
 			<div class="card mb-4 shadow-sm">
 				<div class="card-header">
-					<h4 class="my-0 font-weight-normal">Lugar Recomendado 3</h4>
+					<h4 class="my-0 font-weight-normal">Hotel Presidente</h4>
 				</div>
 				<img src="img/alojamiento5.PNG" class="card-img-top" height="200" width="200">
 				<div class="card-body">
-					<h1 class="card-title pricing-card-title">$35 <small class="text-muted">/por noche</small></h1>
+					<h2 class="card-title pricing-card-title">¢15500  <small class="text-muted">/por noche</small></h1>
 					<ul class="list-unstyled mt-3 mb-4">
 						<li>WiFi</li>
 						<li>Desayuno incluido</li>
 						<li>Cerca de puntos de interés</li>
 						<li>Hermosa azotea</li>
 					</ul>
-					<button type="button" class="btn btn-lg btn-block btn-primary">Más detalles</button>
+					<button type="button" class="btn btn-lg btn-block btn-primary" id="5" onclick="datosS()">Más detalles</button>
 				</div>
 			</div>
 		</div>

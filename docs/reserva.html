@@ -3,6 +3,7 @@
     <head>
         <meta charset='utf-8'>
         <title>HOSTY - Reserva</title>
+		<link rel="icon" href="img/logo.png">
         <meta name='viewport' content='width=device-width, initial-scale=1'>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pricing/">
@@ -10,20 +11,158 @@
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/estilos.css" rel="stylesheet">
+        <link href="css/principal.css" rel="stylesheet">
+		<link href="css/estilos.css" rel="stylesheet">
     </head>
 
     <body>
         <nav class="navbar navbar-light bg-white">
-            <a href="index.html">
-                <img src="img/logo.png" style="margin-left: 50px;" width="70" height="80">
-            </a>
-			<form class="form-inline">
-				<button id="btnAloj" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Alojamientos</button>
-				<button id="btnFriends" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Invitar amigos</button>
-				<button id="btnAboutUs" class="btn btn-outline-primary" type="submit" style="margin-right: 0.75em;">Sobre nosotros</button>
-				<button id="btnHelp" class="btn btn-outline-primary" type="submit">Ayuda</button>
+			<a href="index.html">
+				<img src="img/logo.png" style="margin-left: 50px;" width="70" height="80">
+			</a>
+			<form id="formMenu" class="form-inline align-self-center">
+				<button id="btnAloj" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modAloja">Alojamientos</button>
+				<button id="btnFriends" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modInvita">Invitar amigos</button>
+				<button id="btnAboutUs" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modAboutUs">Sobre nosotros</button>
+				<button id="btnHelp" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modHelp">Ayuda</button>
 			</form>
+
+			<!--modal para el alojamiento-->
+			<div class="modal fade" id="modAloja" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modAlojaLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Alojamientos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body table-responsive">
+							<p>Tenemos alojamientos en:</p>
+							<table class="table table-hover">
+								<thead class="thead-light">
+									<tr>
+										<th scope="col">San Jos&eacute;</th>
+										<th scope="col">Cartago</th>
+										<th scope="col">Heredia</th>
+										<th scope="col">Lim&oacute;n</th>
+										<th scope="col">Guanacaste</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>San Jos&eacute;</td>
+										<td>Paraíso</td>
+										<td>Barva</td>
+										<td>Lim&oacute;n</td>
+										<td>Carrillo</td>
+									</tr>
+
+									<tr>
+										<td>P&eacute;rez Zeled&oacute;n</td>
+										<td>Turrialba</td>
+										<td> - </td>
+										<td> - </td>
+										<td>Nicoya</td>
+									</tr>
+
+									<tr>
+										<td>Escaz&uacute;</td>
+										<td> - </td>
+										<td> - </td>
+										<td> - </td>
+										<td> - </td>
+									</tr>
+								</tbody>
+								
+							</table>
+							<p>Puede buscarlos por provincia o lugar.</p>
+						</div>
+						<div class="modal-footer">
+							<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal para el alojamiento-->
+
+			<!--modal para invitar a amigos-->
+			<div class="modal fade" id="modInvita" tabindex="-1" role="dialog" aria-labelledby="modInvitaLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modInvitaLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Invite a sus amigos y conocidos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body table-responsive">
+							<p>Comparta nuestra direción web: <a href="index.html">hosty.co.cr</a> con sus amigos, familiares y conocidos</p>
+						</div>
+						<div class="modal-footer">
+							<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal para invitar a amigos-->
+
+			<!--modal para saber sobre nosotros-->
+			<div class="modal fade" id="modAboutUs" tabindex="-1" role="dialog" aria-labelledby="modAboutUsLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modAboutUsLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> Con&oacute;zcanos</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body table-responsive">
+							<p class="text-justify">
+								Hosty es un mercado comunitario que sirve para publicar, 
+								dar publicidad y reservar alojamiento de forma económica 
+								en Costa Rica a través de internet o desde tu smarthphone.
+							</p>
+							<p class="text-justify">
+								Hosty hace que compartir sea más fácil, divertido y seguro. 
+								Verificamos los perfiles y anuncios de manera personal, 
+								mantenemos un sistema inteligente de mensajería para que 
+								anfitriones y huéspedes puedan comunicarse con seguridad y 
+								administramos una plataforma confiable para recaudar y transferir los pagos.
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal para saber sobre nosotros-->
+
+			<!--modal para ayuda-->
+			<div class="modal fade" id="modHelp" tabindex="-1" role="dialog" aria-labelledby="modHelpLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="modHelpLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60">Queremos ayudarle</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body table-responsive">
+							<p>
+								Contacte con el soporte t&eacute;cnico de Hosty para cualquier duda o consulta a trav&eacute;s 
+								del correo <a href="soporte_cliente@hosty.co.cr">soporte_cliente@hosty.co.cr</a>.
+							</p>
+						</div>
+						<div class="modal-footer">
+							<button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--modal para ayuda-->
 		</nav>
 
         <div class="container" id="divReserva">
@@ -47,7 +186,7 @@
 					</div>
                     
 					<div class="col-md-2">
-						<button onclick="reservar()" id="btnReserva" class="btn btn-outline-primary" style="width: 95%;" type="submit">Reservar</button>
+						<button id="btnReserva" onclick="reservar()" id="btnReserva" class="btn btn-default btn-md-text" style="width: 95%;" type="submit">Reservar</button>
 					</div>
 				</div>
 
