@@ -66,8 +66,38 @@
                                         <input id="numSeg" type="text" class="form-control" placeholder="Código de Seguridad">
                                     </div>
                                     <div>
-                                        <button id="btnNumCard" onclick="btnNumSeg()" class="btn btn-default btn-md-text" aria-describedby="tooltip">?</button>
+                                        <button id="btnNumCard" class="btn btn-default btn-md-text" type="button" data-toggle="modal" data-target="#modCodSeg">?</button>
                                     </div>
+
+                                    <!--modal del codigo de seguridad-->
+                                    <div class="modal fade" id="modCodSeg" tabindex="-1" role="dialog" aria-labelledby="modCodSegLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modCodSegLabel"> <img src="img/logo.png" style="margin-left: 50px;" width="50" height="60"> C&oacute;digo de Seguridad</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body table-responsive">
+                                                    <p class="text-justify">
+                                                        El código de seguridad son los últimos 
+                                                        tres dígitos localizados en la banda al 
+                                                        reverso de la tarjeta.
+                                                    </p>
+                                                    <p class="text-justify">
+                                                        Este es un código de comprobación de los
+                                                        datos y ofrece un mayor grado de seguridad 
+                                                        en su registro en línea.
+                                                    </p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="btnCloseMod" type="button" class="btn btn-default btn-md-text" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--modal del codigo de seguridad-->
                                 </div>
                             </div>
 
