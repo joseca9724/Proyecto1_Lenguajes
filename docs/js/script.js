@@ -304,10 +304,6 @@ function datosS(e) {
 
 }
 
-function btnNumSeg() {
-    alert('El código de seguridad son los últimos tres dígitos localizados en la banda al reverso de la tarjeta. \nEste es un código de comprobación de los datos y ofrece un mayor grado de seguridad en su registro en línea.');
-}
-
 function btnPago() {
     var nombre = document.getElementById('nombre').value;
     var apellidos = document.getElementById('apellidos').value;

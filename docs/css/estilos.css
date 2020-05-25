@@ -11,6 +11,18 @@
 		margin-left: 0.75em;
 		margin-bottom: 0.75em;
 	}
+
+	.col-md-2{
+		margin-bottom: 0.5em;
+	}
+
+	.col-md-5{
+		margin-bottom: 0.5em;
+	}
+
+	.col-md-6{
+		margin-bottom: 0.5em;
+	}
 }
 
 @media ( max-width : 500px ){
@@ -24,7 +36,7 @@
 	}
 
 	.btn-md-text.btn-default{
-		font-size: 7pt !important;
+		font-size: 8pt !important;
 	}
 
 	.col-md-2{
@@ -37,6 +49,10 @@
 
 	.col-md-6{
 		margin-bottom: 0.5em;
+	}
+
+	a#btnCollapse{
+		margin-left: 7em;
 	}
 }
 
@@ -81,6 +97,18 @@ button#btnPay{
 button#btnFacFin{
 	width: 100%;
 	margin-top: 1em;
+}
+
+a#btnBusquedaR{
+	margin-right: 0.75em;
+	border-color: #e64040;
+	color: #e64040;
+}
+
+a#btnBusquedaR:hover{
+	background-color: #e64040;
+	border-color: #e64040;
+	color: #ffffff;
 }
 
 button#btnAloj, #btnFriends, #btnAboutUs, #btnHelp, #btnBuscar, #btnPay, #btnNumCard, #btnCloseMod,
