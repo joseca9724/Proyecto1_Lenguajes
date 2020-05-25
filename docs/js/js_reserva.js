@@ -1,4 +1,4 @@
-var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel JC", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1 };
+var alojamiento1 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Hotel JC", tipo: "Habitación de hotel", img: "img/hotelJC.PNG", descripcion: "Gran hotel 5 estrellas", codigo: 1, costo:20000};
 var alojamiento2 = { ubicacion: "costa rica,cartago,turrialba", nombre: "Casa JC", tipo: "Alojamiento Entero", img: "img/casaJC.PNG", descripcion: "Hermosa casa rustica", codigo: 2 };
 var alojamiento3 = { ubicacion: "costa rica,cartago,paraíso", nombre: "Casa Paraíso", tipo: "Habitación privada", img: "img/alojamiento3.PNG", descripcion: "Casa en zona tranquila", codigo: 3 };
 var alojamiento4 = { ubicacion: "costa rica,guanacaste,carrillo", nombre: "Cabinas Carrillo", tipo: "Habitación compartida", img: "img/alojamiento4.PNG", descripcion: "Disfruta de magnificas playas", codigo: 4 };
@@ -757,3 +757,21 @@ switch (x) {
     // code block
 }
 
+function reservar(){
+    var x = JSON.parse(localStorage.getItem('obj'));
+    let obj = {
+        codigo: x.codigo,
+        lugar: document.getElementById('lugar').value,
+        nombre: listaAlojamientos[x.codigo-1].nombre,
+        dateStart: document.getElementById('date-start').value,
+        dateEnd: document.getElementById('date-end').value,
+        huespedes: document.getElementById('huesped').value,
+        costo: listaAlojamientos[x.codigo-1].costo
+    }
+
+    localStorage.setItem("obj",JSON.stringify(obj));
+
+    location.href = "pago.html";
+
+    console.log(localStorage.getItem('obj'));
+}
